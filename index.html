@@ -11,19 +11,19 @@
         <p class="title">Rock Paper Scissor</p>
 
         <button class="buttons-property" onclick="
-            getmoves('Rock');
+            getmoves('rock');
         ">
             <img src="rock-emoji.png" class="icons">
         </button>
 
         <button class="buttons-property" onclick="
-            getmoves('Paper');
+            getmoves('paper');
         ">
             <img src="paper-emoji.png" class="icons">
         </button>
 
         <button class="buttons-property" onclick="
-            getmoves('Scissors');
+            getmoves('scissors');
         ">
             <img src="scissors-emoji.png" class="icons">
         </button>
@@ -60,13 +60,13 @@
             let computerresult = '';
             let value = Math.random();
             if(value >= 0 && value < 1/3){
-                computerresult = 'Rock';
+                computerresult = 'rock';
             }
             else if(value > 1/3 && value < 2/3){
-                computerresult = 'Paper';
+                computerresult = 'paper';
             }
             else if(value > 2/3 && value < 1){
-                computerresult = 'Scissors';
+                computerresult = 'scissors';
             }
             return computerresult;
         }
@@ -83,22 +83,22 @@
             if(playerMove === computerresult){
                 result = 'Tie';
             }
-            else if(playerMove === 'Paper' && computerresult === 'Rock'){
+            else if(playerMove === 'paper' && computerresult === 'rock'){
                 result = 'You Win';
             }
-            else if(playerMove === 'Paper' && computerresult === 'Scissors'){
+            else if(playerMove === 'paper' && computerresult === 'scissors'){
                 result = 'You Lose';
             }
-            else if(playerMove === 'Rock' && computerresult === 'Paper'){
+            else if(playerMove === 'rock' && computerresult === 'paper'){
                 result = 'You Lose';
             }
-            else if(playerMove === 'Rock' && computerresult === 'Scissors'){
+            else if(playerMove === 'rock' && computerresult === 'scissors'){
                 result = 'You Win';
             }
-            else if(playerMove === 'Scissors' && computerresult === 'Rock'){
+            else if(playerMove === 'scissors' && computerresult === 'rock'){
                 result = 'You Lose';
             }
-            else if(playerMove === 'Scissors' && computerresult === 'Paper'){
+            else if(playerMove === 'scissors' && computerresult === 'paper'){
                 result = 'You Win';
             }
             
@@ -120,7 +120,7 @@
 
             //for moves
             document.querySelector('.js-moves').innerHTML = `You Choose: <img src="${playerMove}-emoji.png" class="result-icon"> , Computer Choose:  <img src="${computerresult}-emoji.png" class="result-icon">`;
-
+            
             //for final result
             document.querySelector('.js-result').innerHTML = result;
         }
